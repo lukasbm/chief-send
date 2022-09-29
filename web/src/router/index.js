@@ -1,18 +1,26 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: "/",
-      name: "home",
-      component: HomeView,
+      redirect: "/upload",
     },
     {
-      path: "/about",
-      name: "about",
-      component: () => import("../views/AboutView.vue"),
+      path: "/upload",
+      name: "upload",
+      component: () => import("../views/UploadView.vue"),
+    },
+    {
+      path: "/public",
+      name: "public",
+      component: () => import("../views/PublicView.vue"),
+    },
+    {
+      path: "/download/:id",
+      name: "download",
+      component: () => import("../views/DownloadView.vue"),
     },
   ],
 });
