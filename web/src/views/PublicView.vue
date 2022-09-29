@@ -1,14 +1,12 @@
 <script setup>
-import { onMounted, ref } from "vue";
+import { ref } from "vue";
 import { getPublicShares } from "../services/data";
 
 const shares = ref(null);
 
-onMounted(() => {
-  getPublicShares()
-    .then((res) => (shares.value = res))
-    .catch((err) => console.error(err));
-});
+getPublicShares()
+  .then((res) => (shares.value = res))
+  .catch((err) => console.error(err));
 </script>
 
 <template>
