@@ -1,11 +1,11 @@
 {
   "name": "chief-send",
-  "version": "1.0.0",
   "description": "ChiefSend",
   "keywords": [],
   "author": "lukasbm",
   "license": "ISC",
   "private": "true",
+  "version": "0.0.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lukasbm/chief-send.git"
@@ -16,5 +16,9 @@
   "homepage": "https://github.com/lukasbm/chief-send#readme",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  }
+  },
+  "workspaces": [
+    "web",
+    "functions"
+  ]
 }
